@@ -1,5 +1,5 @@
 /**
- * LiveData is an observable data holder class inspired from Google Android Jetpack library.
+ * LiveData.js is an observable data holder class inspired from Google Android Jetpack library.
  */
 class LiveData {
     // _valueIsInitialized<boolean>
