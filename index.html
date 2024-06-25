@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>LiveData.js</title>
+    <meta name="description"
+        content="LiveData is an observable data holder class inspired from Google Android Jetpack library">
+    <meta name="keywords" content="javascript, reactive, livedata">
+
+    <script src="livedata.js"></script>
+    <!-- CSS  -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+</head>
+
+<body>
+    <div class="navbar-fixed">
+        <nav class="teal lighten-1" role="navigation">
+            <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">LiveData.js</a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="#section-usage">Usage</a></li>
+                    <li><a href="#section-demo">Demo</a></li>
+                </ul>
+    
+                <ul id="nav-mobile" class="sidenav">
+                    <li><a href="#section-usage">Usage</a></li>
+                    <li><a href="#section-demo">Demo</a></li>
+                </ul>
+                <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            </div>
+        </nav>
+    </div>
+    <div class="section no-pad-bot" id="index-banner">
+        <div class="container">
+            <br><br>
+            <h1 class="header center teal-text">LiveData.js</h1>
+            <div class="row center">
+                <h5 class="header col s12 light">LiveData is an observable data holder class inspired from Google
+                    Android Jetpack library</h5>
+            </div>
+            <div class="row center">
+                <a href="https://raw.githubusercontent.com/diolan12/livedata/main/livedata.min.js" download
+                    id="download-button" class="btn-large waves-effect waves-light teal">Download</a>
+            </div>
+            <br><br>
+
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div class="section">
+
+            <!--   Icon Section   -->
+            <div class="row">
+                <div class="col s12 m4">
+                    <div class="icon-block">
+                        <h2 class="center light-blue-text"><i class="material-icons">flash_on</i></h2>
+                        <h5 class="center">Speeds up development</h5>
+
+                        <p class="light hide">We did most of the heavy lifting for you to provide a default stylings that
+                            incorporate our custom components. Additionally, we refined animations and transitions to
+                            provide a smoother experience for developers.</p>
+                    </div>
+                </div>
+
+                <div class="col s12 m4">
+                    <div class="icon-block">
+                        <h2 class="center light-blue-text"><i class="material-icons">group</i></h2>
+                        <h5 class="center">User Experience Focused</h5>
+
+                        <p class="light hide">By utilizing elements and principles of Material Design, we were able to create
+                            a framework that incorporates components and animations that provide more feedback to users.
+                            Additionally, a single underlying responsive system across all platforms allow for a more
+                            unified user experience.</p>
+                    </div>
+                </div>
+
+                <div class="col s12 m4">
+                    <div class="icon-block">
+                        <h2 class="center light-blue-text"><i class="material-icons">settings</i></h2>
+                        <h5 class="center">Easy to work with</h5>
+
+                        <p class="light hide">We have provided detailed documentation as well as specific code examples to
+                            help new users get started. We are also always open to feedback and can answer any questions
+                            a user may have about Materialize.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <br><br>
+        <div id="section-usage" class="section">
+            <div class="row">
+                <div class="col s12">
+                    <div class="card grey darken-2">
+                        <div class="card-content">
+                            <span class="card-title white-text">Declaration</span>
+                            <p class="white-text">Creates a new instance of the LiveData class</p>
+                            <pre class="grey darken-3">
+<code class="language-javascript">
+    const data = new LiveData()
+</code>
+                            </pre>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12">
+                    <div class="card grey darken-2">
+                        <div class="card-content">
+                            <span class="card-title white-text">Observing a LiveData</span>
+                            <p class="white-text">Getting instant callback whenever the value are changed</p>
+                            <pre class="grey darken-3">
+<code class="language-javascript">
+    data.observe(v => {
+        console.log('observe', v)
+    })
+</code>
+                            </pre>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12">
+                    <div class="card grey darken-2">
+                        <div class="card-content">
+                            <span class="card-title white-text">Debounced observe</span>
+                            <p class="white-text">Observing changes in the data object with a debounce mechanism</p>
+                            <pre class="grey darken-3">
+<code class="language-javascript">
+    data.observeDebounce(v => {
+        console.log('observeDebounce', v)
+    })
+</code>
+                            </pre>
+                            <p class="white-text">or with your prefered time</p>
+                            <pre class="grey darken-3">
+<code class="language-javascript">
+    data.observeDebounce(v => {
+        console.log('observeDebounce', v)
+    }, 1300)
+</code>
+                            </pre>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12">
+                    <div class="card grey darken-2">
+                        <div class="card-content">
+                            <span class="card-title white-text">Throttled observe</span>
+                            <p class="white-text">Observing changes in the data object with a throttled mechanism</p>
+                            <pre class="grey darken-3">
+<code class="language-javascript">
+    data.observeThrottle(v => {
+        console.log('observeThrottle', v)
+    })
+</code>
+                            </pre>
+                            <p class="white-text">or with your prefered time</p>
+                            <pre class="grey darken-3">
+<code class="language-javascript">
+    data.observeThrottle(v => {
+        console.log('observeThrottle', v)
+    }, 1300)
+</code>
+                            </pre>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12">
+                    <div class="card grey darken-2">
+                        <div class="card-content">
+                            <span class="card-title white-text">Post a value</span>
+                            <p class="white-text">Posts an asynchronous task to a main thread to set the given value.</p>
+                            <pre class="grey darken-3">
+<code class="language-javascript">
+    data.postValue('Hello World!')
+</code>
+                            </pre>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12">
+                    <div class="card grey darken-2">
+                        <div class="card-content">
+                            <span class="card-title white-text">Input binding</span>
+                            <p class="white-text">You can just post value from an element event</p>
+                            <pre class="grey darken-3">
+<code class="language-javascript">
+    &lt;input type="text" onkeyup="data.postValue(this.value)" /&gt;
+</code>
+                            </pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="section-demo" class="section">
+            <div class="row">
+                <div class="col s12">
+                    <div class="card">
+                        <div class="card-content">
+                            <span class="card-title">Input binding demo</span>
+                            <div class="row">
+                                <div class="input-field col s6">
+                                  <input value="Hello World!" id="onkeyup" onkeyup="demo1.postValue(this.value)" type="text" class="validate">
+                                  <label class="active" for="onkeyup">On Key Up</label>
+                                </div>
+                                <div class="col s6">
+                                    Output:
+                                    <p id="output-onkeyup">Hello World!</p>
+                                </div>
+                              </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12">
+                    <div class="card">
+                        <div class="card-content">
+                            <span class="card-title">Debounced observe</span>
+                            <div class="row">
+                                <div class="input-field col s12">
+                                  <input id="onkeyup-debounced" onkeyup="demo2.postValue(this.value)" type="text" class="validate">
+                                  <label class="active" for="onkeyup-debounced">Some query stuff</label>
+                                </div>
+                              </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="page-footer teal">
+        <div class="container">
+            <div class="row">
+                <div class="col l3 s12">
+                    <h5 class="white-text">Connect</h5>
+                    <ul>
+                        <li><a class="white-text" href="https://github.com/diolan12">Github</a></li>
+                        <li><a class="white-text" href="https://github.com/diolan12/livedata">Repository</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                Made with <a class="pink-text text-lighten-3" href="http://materializecss.com">Materialize</a>
+            </div>
+        </div>
+    </footer>
+
+
+    <!--  Scripts-->
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="app.js"></script>
+    <script>
+        const demo1 = new LiveData()
+        demo1.observe(v => {
+            $('#output-onkeyup').text(v)
+        })
+
+        const demo2 = new LiveData()
+        demo2.observeDebounce(v => {
+            M.toast({html: `Query sent to server:<br>"${v}"`})
+        }, 800)
+    </script>
+
+</body>
+
+</html>
