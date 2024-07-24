@@ -17,8 +17,5 @@
   "bugs": {
     "url": "https://github.com/diolan12/livedata/issues"
   },
-  "homepage": "https://diolan12.github.io/livedata/",
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
-  }
+  "homepage": "https://diolan12.github.io/livedata/"
 }
