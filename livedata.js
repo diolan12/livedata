@@ -308,3 +308,7 @@ class LiveValidator extends Map {
         return !Array.from(this.values()).includes(false)
     }
 }
+
+if (typeof exports != "undefined") {
+    module.exports = { LiveData, ValidatorMap, LiveValidator }
+}
