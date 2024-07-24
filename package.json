@@ -1,7 +1,7 @@
 {
   "name": "js-livedata",
   "version": "1.0.0",
-  "description": "LiveData.js is an observable data holder class inspired from Google Android Jetpack library",
+  "description": "LiveData.js is a lightweight observable data holder class inspired from Google Android Jetpack library",
   "main": "livedata.js",
   "repository": {
     "type": "git",

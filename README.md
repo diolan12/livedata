@@ -1,6 +1,6 @@
 # LiveData.js
 
-LiveData.js is an observable data holder class inspired from Google Android Jetpack library
+LiveData.js is a lightweight observable data holder class inspired from Google Android Jetpack library
 
 ## Import using CDN
 
