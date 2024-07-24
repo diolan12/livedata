@@ -15,9 +15,12 @@
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link href="style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+
+    <link rel="stylesheet" href="prism.css">
+    <script src="prism.js"></script>
 </head>
 
-<body>
+<body class="grey darken-3 white-text">
     <div class="navbar-fixed">
         <nav class="teal lighten-1" role="navigation">
             <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">LiveData.js</a>
@@ -105,11 +108,11 @@
                 <div class="col s12">
                     <div class="card grey darken-2">
                         <div class="card-content">
-                            <span class="card-title white-text">Import via CDN</span>
-                            <p class="white-text">Creates a new instance of the LiveData class</p>
-                            <pre class="grey darken-3">
+                            <span class="card-title">Import via CDN</span>
+                            <p>Creates a new instance of the LiveData class</p>
+                            <pre>
 <code class="language-html">
-    &lt;script src="https://unpkg.com/js-livedata@1.0.0/livedata.min.js"&gt;&lt;/script&gt;
+&lt;script src="https://unpkg.com/js-livedata@1.0.2/livedata.min.js"&gt;&lt;/script&gt;
 </code>
                             </pre>
                         </div>
@@ -118,9 +121,9 @@
                 <div class="col s12">
                     <div class="card grey darken-2">
                         <div class="card-content">
-                            <span class="card-title white-text">Declaration</span>
-                            <p class="white-text">Creates a new instance of the LiveData class</p>
-                            <pre class="grey darken-3">
+                            <span class="card-title">Declaration</span>
+                            <p>Creates a new instance of the LiveData class</p>
+                            <pre>
 <code class="language-javascript">
     const data = new LiveData()
 </code>
@@ -131,9 +134,9 @@
                 <div class="col s12">
                     <div class="card grey darken-2">
                         <div class="card-content">
-                            <span class="card-title white-text">Observing a LiveData</span>
-                            <p class="white-text">Getting instant callback whenever the value are changed</p>
-                            <pre class="grey darken-3">
+                            <span class="card-title">Observing a LiveData</span>
+                            <p>Getting instant callback whenever the value are changed</p>
+                            <pre>
 <code class="language-javascript">
     data.observe(v => {
         console.log('observe', v)
@@ -146,17 +149,17 @@
                 <div class="col s12">
                     <div class="card grey darken-2">
                         <div class="card-content">
-                            <span class="card-title white-text">Debounced observe</span>
-                            <p class="white-text">Observing changes in the data object with a debounce mechanism</p>
-                            <pre class="grey darken-3">
+                            <span class="card-title">Debounced observe</span>
+                            <p>Observing changes in the data object with a debounce mechanism</p>
+                            <pre>
 <code class="language-javascript">
     data.observeDebounce(v => {
         console.log('observeDebounce', v)
     })
 </code>
                             </pre>
-                            <p class="white-text">or with your prefered time</p>
-                            <pre class="grey darken-3">
+                            <p>or with your prefered time</p>
+                            <pre>
 <code class="language-javascript">
     data.observeDebounce(v => {
         console.log('observeDebounce', v)
@@ -169,17 +172,17 @@
                 <div class="col s12">
                     <div class="card grey darken-2">
                         <div class="card-content">
-                            <span class="card-title white-text">Throttled observe</span>
-                            <p class="white-text">Observing changes in the data object with a throttled mechanism</p>
-                            <pre class="grey darken-3">
+                            <span class="card-title">Throttled observe</span>
+                            <p>Observing changes in the data object with a throttled mechanism</p>
+                            <pre>
 <code class="language-javascript">
     data.observeThrottle(v => {
         console.log('observeThrottle', v)
     })
 </code>
                             </pre>
-                            <p class="white-text">or with your prefered time</p>
-                            <pre class="grey darken-3">
+                            <p>or with your prefered time</p>
+                            <pre>
 <code class="language-javascript">
     data.observeThrottle(v => {
         console.log('observeThrottle', v)
@@ -192,10 +195,10 @@
                 <div class="col s12">
                     <div class="card grey darken-2">
                         <div class="card-content">
-                            <span class="card-title white-text">Post a value</span>
-                            <p class="white-text">Posts an asynchronous task to a main thread to set the given value.
+                            <span class="card-title">Post a value</span>
+                            <p>Posts an asynchronous task to a main thread to set the given value.
                             </p>
-                            <pre class="grey darken-3">
+                            <pre>
 <code class="language-javascript">
     data.postValue('Hello World!')
 </code>
@@ -206,9 +209,9 @@
                 <div class="col s12">
                     <div class="card grey darken-2">
                         <div class="card-content">
-                            <span class="card-title white-text">Input binding</span>
-                            <p class="white-text">You can just post value from an element event</p>
-                            <pre class="grey darken-3">
+                            <span class="card-title">Input binding</span>
+                            <p>You can just post value from an element event</p>
+                            <pre>
 <code class="language-javascript">
     &lt;input type="text" oninput="data.postValue(this.value)" /&gt;
 </code>
@@ -221,7 +224,7 @@
         <div id="section-demo" class="section">
             <div class="row">
                 <div class="col s12">
-                    <div class="card">
+                    <div class="card grey lighten-2 black-text">
                         <div class="card-content">
                             <span class="card-title">Input binding demo</span>
                             <div class="row">
@@ -239,7 +242,7 @@
                     </div>
                 </div>
                 <div class="col s12">
-                    <div class="card">
+                    <div class="card grey lighten-2 black-text">
                         <div class="card-content">
                             <span class="card-title">Debounced observe</span>
                             <div class="row">
@@ -259,9 +262,9 @@
                 <div class="col s12">
                     <div class="card grey darken-2">
                         <div class="card-content">
-                            <span class="card-title white-text">LiveValidator</span>
-                            <p class="white-text">Creates a new instance of the LiveValidator class</p>
-                            <pre class="grey darken-3">
+                            <span class="card-title">LiveValidator</span>
+                            <p>Creates a new instance of the LiveValidator class</p>
+                            <pre>
 <code class="language-javascript">
     const validator = new LiveValidator()
     // or with defined keys
@@ -274,9 +277,9 @@
                 <div class="col s12">
                     <div class="card grey darken-2">
                         <div class="card-content">
-                            <span class="card-title white-text">Observing a LiveValidator</span>
-                            <p class="white-text">Getting instant callback whenever the form are valid</p>
-                            <pre class="grey darken-3">
+                            <span class="card-title">Observing a LiveValidator</span>
+                            <p>Getting instant callback whenever the form are valid</p>
+                            <pre>
 <code class="language-javascript">
     validator.observe((validity, map) => {
         console.log('validator', validity, map)
@@ -289,8 +292,8 @@
                 <div class="col s12">
                     <div class="card grey darken-2">
                         <div class="card-content">
-                            <span class="card-title white-text">Set a key validity</span>
-                            <pre class="grey darken-3">
+                            <span class="card-title">Set a key validity</span>
+                            <pre>
 <code class="language-javascript">
     validator.set('username', someValue != '' && someValue.length >= 8)
 </code>
@@ -301,9 +304,9 @@
                 <div class="col s12">
                     <div class="card grey darken-2">
                         <div class="card-content">
-                            <span class="card-title white-text">Input binding</span>
-                            <p class="white-text">You can just set validity from an element event with the key</p>
-                            <pre class="grey darken-3">
+                            <span class="card-title">Input binding</span>
+                            <p>You can just set validity from an element event with the key</p>
+                            <pre>
 <code class="language-html">
     &lt;input type="text" oninput="validator.set('username', this.value != '')" /&gt;
 </code>
@@ -312,7 +315,7 @@
                     </div>
                 </div>
                 <div class="col s12">
-                    <div class="card">
+                    <div class="card grey lighten-2 black-text">
                         <div class="card-content">
                             <span class="card-title">LiveValidator demo</span>
                             <div class="row">
@@ -349,9 +352,9 @@
         <div class="container">
             <div class="row">
                 <div class="col l3 s12">
-                    <h5 class="white-text">Connect</h5>
+                    <h5>Connect</h5>
                     <ul>
-                        <li><a class="white-text" href="https://github.com/diolan12">Github</a></li>
+                        <li><a class="white-text" href="https://www.npmjs.com/package/js-livedata">NPM</a></li>
                         <li><a class="white-text" href="https://github.com/diolan12/livedata">Repository</a></li>
                     </ul>
                 </div>

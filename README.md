@@ -11,7 +11,7 @@ LiveData.js is a lightweight observable data holder class inspired from Google A
 ## Import using CDN
 
 ```html
-<script src="https://unpkg.com/js-livedata@1.0.0/livedata.min.js"></script>
+<script src="https://unpkg.com/js-livedata@1.0.2/livedata.min.js"></script>
 ```
 
 ## Usage
