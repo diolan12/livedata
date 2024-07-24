@@ -5,7 +5,7 @@ LiveData.js is an observable data holder class inspired from Google Android Jetp
 ## Import using CDN
 
 ```html
-<script src="https://unpkg.com/js-livedata@1.0.0/livedata.min.js></script>
+<script src="https://unpkg.com/js-livedata@1.0.0/livedata.min.js"></script>
 ```
 
 ## Usage
