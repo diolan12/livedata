@@ -1,5 +1,5 @@
 {
-  "name": "livedata",
+  "name": "livedata.js",
   "version": "1.0.0",
   "description": "LiveData.js is an observable data holder class inspired from Google Android Jetpack library",
   "main": "livedata.js",
