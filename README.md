@@ -1,6 +1,6 @@
 # LiveData.js
 
-[![Node.js Package](https://github.com/diolan12/js-livedata/actions/workflows/npm-publish.yml/badge.svg)](https://github.com/diolan12/js-livedata/actions/workflows/npm-publish.yml)
+[![Node.js Package](https://github.com/diolan12/livedata/actions/workflows/npm-publish.yml/badge.svg)](https://github.com/diolan12/livedata/actions/workflows/npm-publish.yml)
 [![NPM downloads](https://img.shields.io/npm/dm/js-livedata.svg?style=flat)](https://npmcharts.com/compare/js-livedata?minimal=true)
 [![NPM version](https://img.shields.io/npm/v/js-livedata.svg?style=flat)](https://npmjs.org/package/js-livedata)
 [![MIT License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat)](LICENSE)
