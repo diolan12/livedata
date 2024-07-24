@@ -3,6 +3,7 @@
 [![Node.js Package](https://github.com/diolan12/livedata/actions/workflows/npm-publish.yml/badge.svg)](https://github.com/diolan12/livedata/actions/workflows/npm-publish.yml)
 [![NPM downloads](https://img.shields.io/npm/dm/js-livedata.svg?style=flat)](https://npmcharts.com/compare/js-livedata?minimal=true)
 [![NPM version](https://img.shields.io/npm/v/js-livedata.svg?style=flat)](https://npmjs.org/package/js-livedata)
+[![pages-build-deployment](https://github.com/diolan12/livedata/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/diolan12/livedata/actions/workflows/pages/pages-build-deployment)
 [![MIT License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat)](LICENSE)
 
 LiveData.js is a lightweight observable data holder class inspired from Google Android Jetpack library
