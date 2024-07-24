@@ -24,11 +24,13 @@
                 <ul class="right hide-on-med-and-down">
                     <li><a href="#section-usage">Usage</a></li>
                     <li><a href="#section-demo">Demo</a></li>
+                    <li><a href="#section-livevalidator">LiveValidator</a></li>
                 </ul>
-    
+
                 <ul id="nav-mobile" class="sidenav">
                     <li><a href="#section-usage">Usage</a></li>
                     <li><a href="#section-demo">Demo</a></li>
+                    <li><a href="#section-livevalidator">LiveValidator</a></li>
                 </ul>
                 <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
             </div>
@@ -39,12 +41,13 @@
             <br><br>
             <h1 class="header center teal-text">LiveData.js</h1>
             <div class="row center">
-                <h5 class="header col s12 light">LiveData.js is an observable data holder class inspired from Google
+                <h5 class="header col s12 light">LiveData.js is a lightweight observable data holder class inspired from Google
                     Android Jetpack library</h5>
             </div>
             <div class="row center">
-                <a href="https://raw.githubusercontent.com/diolan12/livedata/main/livedata.min.js" download
-                    id="download-button" class="btn-large waves-effect waves-light teal">Download</a>
+                <a rel="noopener" href="https://raw.githubusercontent.com/diolan12/livedata/main/livedata.min.js"
+                    id="download-button" class="btn-large waves-effect waves-light teal" target="_blank"
+                    download>Download</a>
             </div>
             <br><br>
 
@@ -62,7 +65,8 @@
                         <h2 class="center light-blue-text"><i class="material-icons">flash_on</i></h2>
                         <h5 class="center">Speeds up development</h5>
 
-                        <p class="light hide">We did most of the heavy lifting for you to provide a default stylings that
+                        <p class="light hide">We did most of the heavy lifting for you to provide a default stylings
+                            that
                             incorporate our custom components. Additionally, we refined animations and transitions to
                             provide a smoother experience for developers.</p>
                     </div>
@@ -70,10 +74,11 @@
 
                 <div class="col s12 m4">
                     <div class="icon-block">
-                        <h2 class="center light-blue-text"><i class="material-icons">group</i></h2>
-                        <h5 class="center">User Experience Focused</h5>
+                        <h2 class="center light-blue-text"><i class="material-icons">compress</i></h2>
+                        <h5 class="center">Lightweight Size</h5>
 
-                        <p class="light hide">By utilizing elements and principles of Material Design, we were able to create
+                        <p class="light hide">By utilizing elements and principles of Material Design, we were able to
+                            create
                             a framework that incorporates components and animations that provide more feedback to users.
                             Additionally, a single underlying responsive system across all platforms allow for a more
                             unified user experience.</p>
@@ -85,7 +90,8 @@
                         <h2 class="center light-blue-text"><i class="material-icons">settings</i></h2>
                         <h5 class="center">Easy to work with</h5>
 
-                        <p class="light hide">We have provided detailed documentation as well as specific code examples to
+                        <p class="light hide">We have provided detailed documentation as well as specific code examples
+                            to
                             help new users get started. We are also always open to feedback and can answer any questions
                             a user may have about Materialize.</p>
                     </div>
@@ -96,6 +102,19 @@
         <br><br>
         <div id="section-usage" class="section">
             <div class="row">
+                <div class="col s12">
+                    <div class="card grey darken-2">
+                        <div class="card-content">
+                            <span class="card-title white-text">Import via CDN</span>
+                            <p class="white-text">Creates a new instance of the LiveData class</p>
+                            <pre class="grey darken-3">
+<code class="language-html">
+    &lt;script src="https://unpkg.com/js-livedata@1.0.0/livedata.min.js"&gt;&lt;/script&gt;
+</code>
+                            </pre>
+                        </div>
+                    </div>
+                </div>
                 <div class="col s12">
                     <div class="card grey darken-2">
                         <div class="card-content">
@@ -174,7 +193,8 @@
                     <div class="card grey darken-2">
                         <div class="card-content">
                             <span class="card-title white-text">Post a value</span>
-                            <p class="white-text">Posts an asynchronous task to a main thread to set the given value.</p>
+                            <p class="white-text">Posts an asynchronous task to a main thread to set the given value.
+                            </p>
                             <pre class="grey darken-3">
 <code class="language-javascript">
     data.postValue('Hello World!')
@@ -190,7 +210,7 @@
                             <p class="white-text">You can just post value from an element event</p>
                             <pre class="grey darken-3">
 <code class="language-javascript">
-    &lt;input type="text" onkeyup="data.postValue(this.value)" /&gt;
+    &lt;input type="text" oninput="data.postValue(this.value)" /&gt;
 </code>
                             </pre>
                         </div>
@@ -206,14 +226,15 @@
                             <span class="card-title">Input binding demo</span>
                             <div class="row">
                                 <div class="input-field col s6">
-                                  <input value="Hello World!" id="onkeyup" onkeyup="demo1.postValue(this.value)" type="text" class="validate">
-                                  <label class="active" for="onkeyup">On Key Up</label>
+                                    <input value="Hello World!" id="onkeyup" onkeyup="demo1.postValue(this.value)"
+                                        type="text" class="validate">
+                                    <label class="active" for="onkeyup">Type something</label>
                                 </div>
                                 <div class="col s6">
                                     Output:
                                     <p id="output-onkeyup">Hello World!</p>
                                 </div>
-                              </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -223,10 +244,100 @@
                             <span class="card-title">Debounced observe</span>
                             <div class="row">
                                 <div class="input-field col s12">
-                                  <input id="onkeyup-debounced" onkeyup="demo2.postValue(this.value)" type="text" class="validate">
-                                  <label class="active" for="onkeyup-debounced">Some query stuff</label>
+                                    <input id="onkeyup-debounced" onkeyup="demo2.postValue(this.value)" type="text"
+                                        class="validate">
+                                    <label class="active" for="onkeyup-debounced">Some query stuff</label>
                                 </div>
-                              </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="section-livevalidator" class="section">
+            <div class="row">
+                <div class="col s12">
+                    <div class="card grey darken-2">
+                        <div class="card-content">
+                            <span class="card-title white-text">LiveValidator</span>
+                            <p class="white-text">Creates a new instance of the LiveValidator class</p>
+                            <pre class="grey darken-3">
+<code class="language-javascript">
+    const validator = new LiveValidator()
+    // or with defined keys
+    const validator = new LiveValidator(['username', 'password'])
+</code>
+                            </pre>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12">
+                    <div class="card grey darken-2">
+                        <div class="card-content">
+                            <span class="card-title white-text">Observing a LiveValidator</span>
+                            <p class="white-text">Getting instant callback whenever the form are valid</p>
+                            <pre class="grey darken-3">
+<code class="language-javascript">
+    validator.observe((validity, map) => {
+        console.log('validator', validity, map)
+    })
+</code>
+                            </pre>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12">
+                    <div class="card grey darken-2">
+                        <div class="card-content">
+                            <span class="card-title white-text">Set a key validity</span>
+                            <pre class="grey darken-3">
+<code class="language-javascript">
+    validator.set('username', someValue != '' && someValue.length >= 8)
+</code>
+                            </pre>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12">
+                    <div class="card grey darken-2">
+                        <div class="card-content">
+                            <span class="card-title white-text">Input binding</span>
+                            <p class="white-text">You can just set validity from an element event with the key</p>
+                            <pre class="grey darken-3">
+<code class="language-html">
+    &lt;input type="text" oninput="validator.set('username', this.value != '')" /&gt;
+</code>
+                            </pre>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12">
+                    <div class="card">
+                        <div class="card-content">
+                            <span class="card-title">LiveValidator demo</span>
+                            <div class="row">
+                                <div class="input-field col s6">
+                                    <i class="material-icons prefix">account_circle</i>
+                                    <input id="username" oninput="username.postValue(this.value)" type="text"
+                                        class="">
+                                    <label class="active" for="username">Username</label>
+                                    <span class="helper-text" data-error="this input is not valid"
+                                        data-success="valid input">Min 8 chars</span>
+                                </div>
+                                <div class="input-field col s6">
+                                    <i class="material-icons prefix">key</i>
+                                    <input id="password" oninput="validator.set('login-password', this.value != '')"
+                                        type="password" class="validate">
+                                    <label class="active" for="password">Password</label>
+                                </div>
+                                <div class="col s12 center-align">
+                                    <p>Is it valid?</p>
+                                    <p id="output-login">Form validity value will be here</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-action right-align">
+                            <button id="action-login" onclick="M.toast({ html: `Sigma!` })" type="button" class="btn-flat teal-text disabled">Login</button>
                         </div>
                     </div>
                 </div>
@@ -261,6 +372,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="app.js"></script>
     <script>
+        // LiveData demo
         const demo1 = new LiveData()
         demo1.observe(v => {
             $('#output-onkeyup').text(v)
@@ -268,8 +380,23 @@
 
         const demo2 = new LiveData()
         demo2.observeDebounce(v => {
-            M.toast({html: `Query sent to server:<br>"${v}"`})
+            M.toast({ html: `Query sent to server:<br>"${v}"` })
         }, 800)
+
+        // LiveValidator demo
+        const validator = new LiveValidator(['login-username', 'login-password'])
+        validator.observe((valid, map) => {
+            console.log(valid, map)
+            $('#username').toggleClass('invalid', !map.get('login-username'))
+            $('#username').toggleClass('valid', map.get('login-username'))
+            $('#action-login').toggleClass('disabled', !valid)
+            $('#output-login').text(`${valid}, ${valid ? 'the login button will be enabled' : 'the login button will be disabled'}`)
+        })
+        const username = new LiveData()
+        username.observe(v => {
+            let validity = v != '' && v.length >= 8
+            validator.set('login-username', validity)
+        })
     </script>
 
 </body>

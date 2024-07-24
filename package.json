@@ -1,0 +1,21 @@
+{
+  "name": "js-livedata",
+  "version": "1.0.2",
+  "description": "LiveData.js is a lightweight observable data holder class inspired from Google Android Jetpack library",
+  "main": "livedata.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/diolan12/livedata.git"
+  },
+  "keywords": [
+    "javascript",
+    "observable",
+    "livedata"
+  ],
+  "author": "diolan12",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/diolan12/livedata/issues"
+  },
+  "homepage": "https://diolan12.github.io/livedata/"
+}
